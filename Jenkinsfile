@@ -13,13 +13,13 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Stg') {
       steps {
         echo 'Deploying....'
       }
     }
 
-    stage('') {
+    stage('Live') {
       steps {
         input(message: 'Continue', id: 'wiat-for-input', ok: 'Yes Please')
         echo 'Deploy to live'
