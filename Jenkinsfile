@@ -22,13 +22,6 @@ pipeline {
     
     stage('Load Test - Stg3') {
       steps {
-        echo 'Installing k6'
-        sh 'apt-get update'
-        sh 'apt-get install dirmngr --install-recommends'
-        sh 'apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69'
-        sh 'apt-get update'
-        sh 'apt-get install k6'
-        echo 'Running K6 performance tests...'
         sh '''k6 run disco-k6/search-autocomplete-v3-k6.js -v\
                  -e DISCOVERY_URL=http://stg3.dh-discovery-staging.net/search/api/v3/autocomplete\
                  -e DISCOVERY_PLATFORM=pandora\
