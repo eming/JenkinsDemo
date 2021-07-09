@@ -10,7 +10,7 @@ export let options = {
   duration: '30s',
 };
 export default function () {
-  let res = http.get('https://www.youtube.com/');
+  let res = http.get('https://eminguliyev1987.com/');
   sleep(1);
   check(res, {
     'response code was 200': (res) => res.status == 200
