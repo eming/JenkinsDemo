@@ -6,7 +6,10 @@ export let options = {
   duration: '30s',
 };
 export default function () {
-  http.get('http://test.k6.io');
+  let res = http.get('https://eminguliyev1987.com/');
   sleep(1);
-  fail('status code was *not* 200');
+    check(res, {
+    'response code was 200': (res) => res.status == 200,
+    'body size was 1234 bytes': (res) => res.body.length == 1234,
+  });
 }
