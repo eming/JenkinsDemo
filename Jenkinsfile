@@ -23,7 +23,7 @@ pipeline {
     stage('Load Test - Stg3') {
       steps {
         sh 'ls -a'
-        sh '''/usr/local/bin/docker run  loadimpact/k6 run  script.js'''
+        sh '/usr/local/bin/docker run  loadimpact/k6 run  ./script.js'
       }
     }
     
