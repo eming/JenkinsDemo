@@ -13,7 +13,6 @@ export default function () {
   let res = http.get('https://www.youtube.com/');
   sleep(1);
   check(res, {
-    'response code was 200': (res) => res.status == 200,
-    'body size was 1234 bytes': (res) => res.body.length == 1234,
+    'response code was 200': (res) => res.status == 200
   });
 }
