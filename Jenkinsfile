@@ -1,10 +1,6 @@
 pipeline {
   agent any
   
-  options {
-    enforceBuildSchedule()
-  }
-  
   stages {
     stage('Build') {
       steps {
