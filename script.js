@@ -7,4 +7,5 @@ export let options = {
 export default function () {
   http.get('http://test.k6.io');
   sleep(1);
+  fail('status code was *not* 200');
 }
