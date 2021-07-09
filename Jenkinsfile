@@ -22,6 +22,7 @@ pipeline {
     
     stage('Load Test - Stg3') {
       steps {
+        sh 'pwd'
         sh '''k6 run disco-k6/search-autocomplete-v3-k6.js -v\
                  -e DISCOVERY_URL=http://stg3.dh-discovery-staging.net/search/api/v3/autocomplete\
                  -e DISCOVERY_PLATFORM=pandora\
